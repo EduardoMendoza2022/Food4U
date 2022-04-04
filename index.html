@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>FOOD4U</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <img src="logo.png" width="100px" height="100px">
+                </div>
+                <a href="form.html" class="login">Login</a>
+            </div>
+            <div class="texto-principal">
+                <a href="form.html" class="reservacion">Reservar</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="img-texto">
+                <article class="articulo">
+                    <img src="pizza.jpg" width="200px" height="300px">
+                    <h2>Pizzas Italianas</h2>
+                </article>
+                <article class="articulo">
+                    <img src="coffee.jpg" width="210px" height="300px">
+                    <h2>Cafe Gourmet</h2>
+                </article>
+                <article class="articulo">
+                    <img src="sandwich.jpg" width="210px" height="300px">
+                    <h2>Sandwich</h2>
+                </article>
+                <article class="articulo">
+                    <img src="bread.jpg" width="210px" height="300px">
+                    <h2>Reposteria</h2>
+                </article>
+                
+                <div class="caja">
+                <div class="tab">
+                    <label for="radio1">Valores</label>
+                    <label for="radio2">Mision</label>
+                    <label for="radio3">Vision</label>
+                </div>
+
+                <div class="content">
+                    <input type="radio" name="radio" id="radio1">
+                    <div class="tab1">
+                        <h2>Valores</h2>
+                        <p>Honestidad, confianza, firmeza, responsabilidad y liderazgo.</p>
+                    </div>
+
+                    <input type="radio" name="radio" id="radio2">
+                    <div class="tab2">
+                        <h2>Mision</h2>
+                        <p>Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo
+                            alimentos y servicios con la más alta calidad, donde se sobrepasen las
+                            expectativas de nuestros clientes y ser un espacio de trabajo que permita la
+                            realización personal y el Desarrollo de sus colaboradores en el grupo.</p>
+                    </div>
+
+                    <input type="radio" name="radio" id="radio3">
+                    <div class="tab3">
+                        <h2>Visión</h2>
+                        <p>Nuestra visión a futuro es ayudar a crear una localidad más saludable,
+                            más consciente sobre su nutrición, y que nuestra ciudad tenga una opción
+                            confiable y de bajo costo para comer bien, sin sacrificar el placer de comer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="root">
+                <div class="calendar" id="calendar">
+        
+                </div>
+            </div>
+            <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+            <script  type="text/javascript" src="./js/calendar.js"></script>
+            <script type="text/javascript">
+                let calendar = new Calendar('calendar');
+                calendar.getElement().addEventListener('change', e => {
+                    console.log(calendar.value().format('LLL'));
+                });
+            </script>
+            </div>
+
+            
+        <div class="social-bar">
+            <a href="https://es-la.facebook.com/" class="icon icon-facebook2" target="_blank"></a>
+            <a href="https://www.instagram.com/?hl=es" class="icon icon-twitter" target="_blank"></a>
+            <a href="https://twitter.com/?lang=es" class="icon icon-instagram" target="_blank"></a>
+        </div>
+    </div>
+
+    <aside class="carrousel">
+        <div class="carrusel">
+            <h1><b>Premios</b></h1>
+            <div id="carouselExample" class="carousel vert slide" data-ride="carousel" data-interval="1000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h3>Manhathan 1999- The best gourmet Burger, first place</h3>
+                        <img class="d-block mx-auto img-fluid" src="eeuu.png" alt="Primera slide">
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Stn Lucia 2001- The royal preference, second place</h3>
+                        <img class="d-block mx-auto img-fluid" src="eeuu.png" alt="Segunda slide">
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Bogota, Colombia 2001- La Delicia de Bogota, primer lugar.</h3>
+                        <img class="d-block mx-auto img-fluid" src="colombia.png" alt="Tercera slide">
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Madrid, España 2004- La mejor hamburguesa gourmet</h3>
+                      <img class="d-block mx-auto img-fluid" src="españa.png" alt="Cuarta slide">
+                  </div>
+                  <div class="carousel-item">
+                    <h3>Buenos Aires- Argentina 2006-Champio of all tasted</h3>
+                      <img class="d-block mx-auto img-fluid" src="argentina.png" alt="Quinta slide">
+                  </div>
+                  <div class="carousel-item">
+                    <h3>New york, Estados Unidos 2010- The royal Hamburguer</h3>
+                    <img class="d-block mx-auto img-fluid" src="eeuu.png" alt="Sexta slide">
+                </div>
+                <div class="carousel-item">
+                    <h3>Texas, Estados Unidos 2016- Favorite flavore</h3>
+                    <img class="d-block mx-auto img-fluid" src="eeuu.png" alt="Septima slide">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon  rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon  rounded-circle" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                </a>
+            </div>
+        </div>        
+    </aside>
+
+</body>
+</html>

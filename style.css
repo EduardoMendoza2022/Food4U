@@ -1,0 +1,323 @@
+*{
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    font-family: 'Lora', serif, 'Montserrat', sans-serif;
+}
+
+.carrousel{
+    background: rgba(0,0,0,.1);
+    display: flex;
+    flex: 1 1 30%;
+    color: #000;
+    text-align: center;
+    flex-flow: column;
+}
+
+.carrusel{
+    align-items: center;
+}
+
+.carousel-item{
+    padding: 100px 100px;
+    padding-top: 100px;
+}
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(1, 1, 1);
+            transform: translate3d(1, 1, 1);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+.container{
+    flex: 2 1 70%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+        background: url(fondo.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-bottom: 10px;
+    }
+        .menu{
+            background: rgba(0,0,0,.30);
+            display: flex;
+            flex-flow: row nowrap;
+            height: 80px;
+            align-items: center;
+            border-bottom: 2px solid rgba(255, 255, 255, .5);
+        }
+            .logo{
+                flex: 1 1 auto;
+            }
+
+            .login{
+                flex: 1 1 auto;
+                background-color: rgba(0,0,0,.1);
+                margin-left: 70%;
+                text-decoration: none;
+                text-align: center;
+                color: #fff;
+            }
+
+            .login a:hover{
+                color:#343434
+            }
+
+        .texto-principal{
+            display: flex;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            margin-left: 30%;
+            margin-right: 30%;
+            color: #fff;
+        }
+
+            .reservacion{
+                align-items: center;
+               border-radius: 10px;
+               background: rgba(0,0,0,.30);
+               margin-left: 37%;
+               text-decoration: none;
+               color: #000;
+            }
+
+    .section{
+        display:flex;
+        color: #000;
+        flex: 1 1 100%;
+    }
+        .img-texto{
+            display: flex;
+            flex-flow: row wrap;
+            flex: 1 1 100%;
+            color: #000;
+        }
+
+            .articulo{
+                flex: 1 1 40%;
+                transition: 0.5s;
+                object-fit: cover;
+            }
+
+            .articulo img{
+                width: 60%;
+            }
+
+            .articulo:hover{
+                transform: scale(1.1);
+            }
+
+            .caja{
+                margin: 0;
+                width: 100%;
+                margin-bottom: 265px;
+            }
+            .tab{
+                background: #90A743;
+                flex: 1 1 100%;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+
+            .tab label{
+                display: inline-block;
+                padding: 10px;
+                color: #fff;
+                cursor: pointer;
+                transition: all 400ms ease;
+                bottom: -30px;
+            }
+
+            .tab label:hover{
+                background: #58483A;
+            }
+
+            .content{
+                position: relative;
+            }
+
+            .content div{
+                position: absolute;
+                line-height: 1.8;
+                transition: all 600ms ease;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.90);
+                background: #886839 ;
+                padding-bottom: 40px;
+            }
+
+            #radio1,#radio2,#radio3{
+                display: none;
+            }
+
+            #radio1:checked ~ .tab1{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+            #radio2:checked ~ .tab2{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+            #radio3:checked ~ .tab3{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+
+            .content div::after{
+                position: absolute;
+                content: "";
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid #886839 ;
+                bottom: 100%;
+                left: 28px;
+            }
+
+            .content .tab2::after{
+                left: 120px;
+            }
+
+            .content .tab3::after{
+                left: 220px;
+            }
+
+            *, *:before, *:after {
+                padding: 10px;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            :root {
+                --color-bg-calendar: #1b1e22;
+                --color-cell: #e3e3e3;
+                --color-cell-disabled: #424649;
+            }
+            
+            .root {
+                min-height: 40vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .calendar {
+                background-color: var(--color-bg-calendar);
+                border-radius: 3px;
+                width: 100%;
+                max-width: 500px;
+                font-family: sans-serif;
+            }
+            
+            .calendar__header {
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            
+            .calendar .control {
+                color: white;
+                font-weight: bold;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0 5px;
+            }
+            
+            .grid__header, .grid__body {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+            }
+            
+            .grid__header {
+                color: white;
+                margin-bottom: 20px;
+            }
+            
+            .grid__body {
+                grid-auto-rows: 40px;
+                color: var(--color-cell);
+            }
+            
+            .grid__cell {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .grid__cell--gd {
+                cursor: pointer;
+            }
+            
+            .grid__cell--selected {
+                color: var(--color-bg-calendar);
+                background-color: white;
+                border-radius: 50%;
+                border: 2px solid white;
+                box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+            }
+            
+            .grid__cell--disabled {
+                color: var(--color-cell-disabled);
+                cursor: not-allowed;
+            }
+
+            .social-bar{
+                position: fixed;
+                left: 0;
+                font-size: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                z-index: 100;
+            }
+
+            .icon{
+                color: white;
+                text-decoration: none;
+                padding: .7rem;
+                display: flex;
+                transition: all .5s;
+                display: inline-block;
+                padding: 5px 5px;
+            }
+
+            .icon-facebook2{
+                background: #2E406E;
+            }
+
+            .icon-twitter{
+                background: #339DC5;
+            }
+
+            .icon-instagram{
+                background: #3F60A5;
+            }
